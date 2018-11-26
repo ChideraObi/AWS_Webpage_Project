@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// Request a password reset email message
 	$app->passwordReset($usernameOrEmail, $errors);
-	
+
 	$message = "An email has been sent to the specified account, if it exists. Please check your spam folder.";
 
 }
@@ -35,17 +35,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<?php include 'include/header.php'; ?>
-	<main id="wrapper">
-		<h2>Reset Password</h2>
-		<?php include('include/messages.php'); ?>
-		<form method="post" action="reset.php">
-			<input type="text" name="usernameOrEmail" id="usernameOrEmail" placeholder="Enter your username or email address" required="required" size="40" />
-			<input type="submit" value="Submit" />
-		</form>
-		<a href="register.php">Need to create an account?</a>
-	</main>
-	<?php include 'include/footer.php'; ?>
+	<?php include 'include/header.php';
+	 include 'include/bg.php'; ?>
+<div class="section group">
+		<div class="col span_1_of_2">
+
+		</div>
+		<div class="col span_1_of_2">
+				<img src="css/images/logo_full_lat_a.png" alt="Food Pantry Logo" class="center" id="logo">
+				<br/>
+					<div class="center">
+				<h2>Reset Password</h2>
+				<?php include('include/messages.php'); ?>
+			<div>
+				<form method="post" action="reset.php">
+					<input type="text" name="usernameOrEmail" id="usernameOrEmail" placeholder="Enter your username or email address" required="required"/>
+					<br/>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+				<br/>
+				<a href="register.php">Need to create an account?</a>
+					<?php include 'include/footer.php'; ?>
+			</div>
+		</div>
+</div>
 	<script src="js/site.js"></script>
 </body>
 </html>

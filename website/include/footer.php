@@ -1,7 +1,10 @@
-<p class="footer">Copyright &copy; <?php echo date("Y"); ?> Russell Thackston</p>
+<footer>
+		<p>Copyright &copy; <?php echo date("Y"); ?> Russell Thackston & Chidera Obinali</p>
+
+		</footer>
 <?php
 
-if ($_COOKIE['debug'] == "true") {
+if (isset($_COOKIE['debug']) && $_COOKIE['debug'] == "true") {
 	echo "<h3>Debug messages</h3>";
 	echo "<pre>";
     foreach ($app->debugMessages as $msg) {
@@ -9,5 +12,5 @@ if ($_COOKIE['debug'] == "true") {
 	}
 	echo "</pre>";
 }
-	
+
 ?>

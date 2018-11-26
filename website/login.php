@@ -18,7 +18,7 @@ $errors = array();
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 	if (isset($_GET['id'])) {
-		
+
 		$success = $app->processEmailValidation($_GET['id'], $errors);
 		if ($success) {
 			$message = "Email address validated. You may login.";
@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if ($result == TRUE) {
 
 		// Redirect the user to the topics page on success
-		header("Location: list.php");
+		header("Location: recipes.php");
 		exit();
 
 	}
@@ -59,39 +59,52 @@ if (isset($_GET['register']) && $_GET['register']== 'success') {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>russellthackston.me</title>
-	<meta name="description" content="Russell Thackston's personal website for IT 5233">
-	<meta name="author" content="Russell Thackston">
+	<title>Feed Me</title>
+	<meta name="description" content="Chidera's Web App for IT 5233">
+	<meta name="author" content="Chidera Obinali">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<!--1. Display Errors if any exists 
+<!--1. Display Errors if any exists
 	2. Display Login form (sticky):  Username and Password -->
 
 <body>
-	<?php include 'include/header.php'; ?>
+			<?php include 'include/header.php';
+			include 'include/bg.php'; ?>
+<div class="section group">
+	<div class="col span_1_of_2">
 
-	<h2>Login</h2>
-
-	<?php include('include/messages.php'); ?>
-	
+		</div>
+		<div class="col span_1_of_2">
+				<img src="css/images/logo_full_lat_a.png" alt="Food Pantry Logo" class="center" id="logo">
+				<br/>
+					<div class="center">
+				<h2>Login</h2>
+				<?php include('include/messages.php'); ?>
 	<div>
-		<form method="post" action="login.php">
-			
-			<input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username; ?>" />
-			<br/>
+				<form method="post" action="login.php">
 
-			<input type="password" name="password" id="password" placeholder="Password" value="<?php echo $password; ?>" />
-			<br/>
+					<input type="text" name="username" id="username" placeholder="Username" onclick="doPageLoad()" value="<?php echo $username; ?>" />
+					<br/>
 
-			<input type="submit" value="Login" name="login" />
-		</form>
+					<input type="password" name="password" id="password" placeholder="Password" value="<?php echo $password; ?>" />
+					<br/>
+
+					<input type="submit" value="Login" name="login" />
+				</form>
+			</div>
+		Remember my username <input type="checkbox" name="saveUsername" class="saveUser" id="saveLocal" onclick="doSubmit()" />
+			<br/>
+			<a href="register.php">Need to create an account?</a>
+			<br/>
+			<a href="reset.php">Forgot your password?</a>
+						<?php include 'include/footer.php'; ?>
+		</div>
 	</div>
-	<a href="register.php">Need to create an account?</a>
-	<br/>
-	<a href="reset.php">Forgot your password?</a>
-	<?php include 'include/footer.php'; ?>
+</div>
 	<script src="js/site.js"></script>
+	<script src="js/saveUser.js"></script>
+
 </body>
 </html>

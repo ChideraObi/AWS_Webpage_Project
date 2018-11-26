@@ -1,1 +1,39 @@
-This is the help file for my wonderful application. I should add something to it.
+<h3>Overview of the web app </h3>
+<hr>
+
+<h2 id=about>Introducing Feed Me</h2>
+The Feed Me App is a What’s in My Fridge application that allows you to search for recipes that utilize
+majority if not all the ingredients you may have in your household. Using the spoonacular Nutrition,
+Recipe, and Food API, this web app has access to over 365,000 recipes and 86,000 food products making
+the possibilities endless! We also implemented a discussion board for users to share their recipes,
+exchange cooking techniques, and bond over the love of food. Users can upload personal profile
+pictures as long as their appropriate. At Feed Me, our goal is to satisfy you <b><i>and</i></b> your stomach.
+
+
+<br><p><b>Vision</b></p>
+We envisioned Feed Me as a central hub for the lost, the hungry, and the too-lazy-to-go-and-buy-more-groceries. We aimed to create a place where people could find value in what they already had store saving them money and energy while offering a new experience.
+
+
+<h2 id=getstart>Getting Started</h2>
+<p><b>Create an Account</b></p>
+If you're reading this, congratulations! You did the first step. Wasn't too hard, now was it?
+
+<br><p><b>Create a profile picture for us to know you</b></p>
+We suggest you use an image of your favorite dish, location, or even character. For safety and creative purposes. Feel free to change this anytime you want.
+
+<br><p><b>Find a recipe</b></p>
+Now we're onto what you came for. FOOD! In the <u>How to Use Recipe Finder</u> section below, we show a simple guide on how to use the form when accessing recipes. Follow these steps for an A+ experience. You could do the same for the recipes you find, <i>but don't let us stop you from being great while cooking.</i>.
+
+<br><p><b>Come back and tell us about it!</b></p>
+We now have a dicussion board for users to boast about their creations (or life)! Several users come here to post about dinner stories, ask for alternative ingredient ideas, and more. The board is now able to handle images so images are also encourage. The boards are monitored so please keep all content PG. While we may not like it, we aren't opposed to removing even the greatest of chefs.
+
+<br><p><b>Got it? Great! Now do it all over again</b></p>
+Enjoy the App!
+
+<h2>How to Use Recipe Finder</h2>
+
+<img src="css/images/RecipeFormGuideP1.png" style="width:40%;">
+<img src="css/images/RecipeFormGuideP2.png" style="width:40%;">
+
+<br></br>
+<br></br>

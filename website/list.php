@@ -1,5 +1,5 @@
 <?php
-	
+
 // Import the application classes
 require_once('include/classes.php');
 
@@ -27,7 +27,7 @@ if (isset($_GET["error"]) && $_GET["error"] == "nothing") {
 if (isset($_GET["newthing"]) && $_GET["newthing"] == "success") {
 	$message = "Thing successfully created.";
 }
-	
+
 // If someone is attempting to create a new thing, the process the request
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -55,52 +55,55 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>russellthackston.me</title>
-	<meta name="description" content="Russell Thackston's personal website for IT 5233">
-	<meta name="author" content="Russell Thackston">
+	<title>Feed Me</title>
+	<meta name="description" content="Chidera's Web App for IT 5233">
+	<meta name="author" content="Chidera Obinali">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<!--1. Display Errors if any exists 
+<!--1. Display Errors if any exists
 	2. If no errors display things -->
 <body>
-	<?php include 'include/header.php'; ?>
+			<?php include 'include/header.php';?>
+	<div id=centhings>
 	<h2>My Things</h2>
-	
-	<?php include('include/messages.php'); ?>
-	
-	<div class="search">
-		<form action="list.php" method="post">
-			<label for="search">Filter:</label>
-			<input type="text" id="search" name="search"/>
-			<input type="submit" value="Apply" />
-		</form>
-	</div>
-	<ul class="things">
-		<?php if (sizeof($things) == 0) { ?>
-		<li>No things found</li>
-		<?php } ?>
-		<?php foreach ($things as $thing) { ?>
-		<li>
-			<a href="thing.php?thingid=<?php echo $thing['thingid']; ?>"><?php echo $thing['thingname']; ?></a>
-			<span class="author"><?php echo $thing['thingcreated']; ?></span>
-		</li>
-		<?php } ?>
 
-	</ul>
-	<div class="newthing">
-		<form enctype="multipart/form-data" method="post" action="list.php">
-			<input type="text" name="name" id="name" size="81" placeholder="Enter a thing name" value="<?php echo $name; ?>" />
-			<br/>
-			<label for="attachment">Add an image, PDF, etc.</label>
-			<input id="attachment" name="attachment" type="file">
-			<br/>
-			<input type="submit" name="start" value="Create Thing" />
-			<input type="submit" name="cancel" value="Cancel" />
-		</form>
+							<?php include('include/messages.php'); ?>
+			<div class="search">
+				<form action="list.php" method="post">
+					<label for="search">Filter:</label>
+					<input type="text" id="search" name="search"/>
+					<input type="submit" value="Apply" id="filt"/>
+				</form>
+			</div>
+<p/>
+			<ul class="things">
+				<?php if (sizeof($things) == 0) { ?>
+				<li>No things found</li>
+				<?php } ?>
+				<?php foreach ($things as $thing) { ?>
+				<a href="thing.php?thingid=<?php echo $thing['thingid']; ?>"><li><?php echo $thing['thingname']; ?>
+					<span class="author"><?php echo $thing['thingcreated']; ?></span>
+				</li>
+			</a>
+				<?php } ?>
+
+			</ul>
+	<br />
+		<div class="newthing">
+			<form enctype="multipart/form-data" method="post" action="list.php">
+				<input type="text" name="name" id="name" size="81" placeholder="Enter a thing name" value="<?php echo $name; ?>" />
+				<br/>
+				<label for="attachment">Add an image, PDF, etc.</label>
+				<input id="attachment" name="attachment" type="file">
+				<br/>
+				<input type="submit" name="start" value="Create Thing" />
+				<input type="submit" name="cancel" value="Cancel" />
+			</form>
+		</div>
+		<?php include 'include/footer.php'; ?>
 	</div>
-	<?php include 'include/footer.php'; ?>
 	<script src="js/site.js"></script>
 </body>
 </html>

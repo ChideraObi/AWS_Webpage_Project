@@ -45,36 +45,50 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>russellthackston.me</title>
-	<meta name="description" content="Russell Thackston's personal website for IT 5233">
-	<meta name="author" content="Russell Thackston">
+	<title>Feed Me</title>
+	<meta name="description" content="Chidera's Web App for IT 5233">
+	<meta name="author" content="Chidera Obinali">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<!--1. Display Errors if any exists 
+<!--1. Display Errors if any exists
 	2. Display Registration form (sticky):  Username, Password, Question, and Answer -->
 <body>
-	<?php include 'include/header.php'; ?>
-	
-	<h2>Register</h2>
-	
-	<?php include('include/messages.php'); ?>
-		
-	<div>
-		<form action="register.php" method="post">
-			<input type="text" name="username" id="username" placeholder="Pick a username" value="<?php echo $username; ?>" />
-			<br/>
-			<input type="password" name="password" id="password" placeholder="Provide a password" value="<?php echo $password; ?>" />
-			<br/>
-			<input type="text" name="email" id="email" placeholder="Enter your email address" size="50" value="<?php echo $email; ?>" />
-			<br/>
-			<input type="text" name="registrationcode" id="registrationcode" placeholder="Enter the registration code provided by your instructor" size="35" value="<?php echo $registrationcode; ?>" />
-			<br/>
-			<input type="submit" value="Register" />
-		</form>
-	</div>
-	<a href="login.php">Already a member?</a>
-	<?php include 'include/footer.php'; ?>
+			<?php include 'include/header.php';
+			include 'include/bg.php'; ?>
+	<div class="section group">
+		<div class="col span_1_of_2">
+
+			</div>
+			<div class="col span_1_of_2">
+					<img src="css/images/logo_full_lat_a.png" alt="Food Pantry Logo" class="center" id="logo">
+					<br/>
+						<div class="center">
+					<h2>Register</h2>
+
+					<?php include('include/messages.php'); ?>
+
+					<div>
+						<form action="register.php" method="post">
+							<input type="text" name="username" id="username" placeholder="Pick a username" value="<?php echo $username; ?>" />
+							<br/>
+							<input type="password" name="password" id="password" placeholder="Provide a password" value="<?php echo $password; ?>" />
+							<br/>
+							<input type="text" name="email" id="email" placeholder="Enter your email address" size="50" value="<?php echo $email; ?>" />
+							<br/>
+							<input type="text" name="registrationcode" id="registrationcode" placeholder="Enter the registration code provided by your instructor" size="35" value="<?php echo $registrationcode; ?>" />
+							<br/>
+							<input type="submit" value="Register" />
+						</form>
+					</div>
+						<br/>
+						<a href="register.php">Need to create an account?</a>
+						<br/>
+						<a href="reset.php">Forgot your password?</a>
+							<?php include 'include/footer.php'; ?>
+			</div>
+		</div>
+</div>
 	<script src="js/site.js"></script>
 </body>
 </html>
