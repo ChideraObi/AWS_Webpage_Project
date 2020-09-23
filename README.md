@@ -1,10 +1,16 @@
 # AWS Web App Project
 #### Status: DEACTIVATED (code still available)
 
-## Objective
+## Web App Objective
 - To create a fully-functional web application implemented using Amazon Web Services.
 - The web application provides registered users with the ability to begin discussion topics, which other users may comment upon.
 - The Web App must incorporate responsive design elements that pass W3C Html & css validation tests.
+- Intergrate a
+
+## Web App Theme: Food and Recipe Finder (e.g. What's in My Fridge)
+- Food API used: <a href="https://spoonacular.com/food-api">spoonacular API</a>
+- Programming Languages used: HTML, CSS, PHP
+- Design Programs/Tools used: Adobe Photoshop, Adobe Illustrator, <a href="https://coolors.co">Coolors.co</a>
 
 ### Web App Screen Flow
 
