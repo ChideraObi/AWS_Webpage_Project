@@ -6,7 +6,8 @@
 - The Web App must incorporate responsive design elements that pass W3C Html & css validation tests.
 
 **Web App Screen Flow** <br>
-*Illustrator: @russellthackston*
 
 <img src="https://georgiasouthern.desire2learn.com/content/enforced/388490-19120.19122.201801/IT%205233%20Web%20App%20Screen%20Flow.jpg?d2lSessionVal=zy6bt6Cot6jPHyHyKRrZrtWJd&ou=388490" width="500" height="500">
+
+*Illustrator: @russellthackston*
 
